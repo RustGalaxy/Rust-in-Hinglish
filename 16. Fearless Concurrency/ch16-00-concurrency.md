@@ -1,0 +1,18 @@
+## Fearless Concurrency (Nidar Concurrency)
+
+Concurrent programming ko surakshit aur prabhavi dhang se handle karna Rust ke pramukh lakshyon mein se ek hai. **Concurrent programming**, jahan ek program ke alag-alag hisse svatantra roop se chalte hain, aur **parallel programming**, jahan ek program ke alag-alag hisse ek hi samay par chalte hain, tezi se mahatvapurna hote ja rahe hain kyunki adhik se adhik computer apne multiple processors ka laabh utha rahe hain. Aitihasik roop se, in sandarbhon mein programming karna kathin aur truti-purna raha hai: Rust ise badalne ki ummeed karta hai.
+
+Shuruaat mein, Rust team ne socha tha ki memory safety sunishchit karna aur concurrency ki samasyaon ko rokna do alag-alag chunautiyan hain jinhein alag-alag tarikon se hal kiya jaana chahiye. Samay ke saath, team ne paaya ki **ownership aur type systems memory safety *aur* concurrency ki samasyaon dono ko prabandhit karne mein madad karne ke liye ek shaktishaali upkaranon ka set hain!** Ownership aur type checking ka laabh uthakar, Rust mein kai concurrency errors runtime errors ke bajaye compile-time errors ban jaate hain. Isliye, aapko ek runtime concurrency bug ke utpann hone ki sahi paristhitiyon ko baar-baar banane ki koshish mein bahut samay kharch karne ke bajaye, galat code compile hone se mana kar dega aur samasya ko samjhaate hue ek error prastut karega. Parinaamsvaroop, aap apne code ko us par kaam karte samay hi theek kar sakte hain, na ki sambhavatah use production mein bheje jaane ke baad. Humne Rust ke is pehlu ko **fearless concurrency** (nidar concurrency) ka upnaam diya hai. Fearless concurrency aapko aisa code likhne ki anumati deta hai jo sookshm bugs se mukt ho aur jise naye bugs pesh kiye bina refactor karna aasan ho.
+
+> **Note:** Saralta ke liye, hum kai samasyaon ko *concurrent* kahenge, na ki adhik sateek hokar *concurrent and/or parallel* kahenge. Agar yah pustak concurrency aur/ya parallelism ke baare mein hoti, to hum adhik vishisht hote. Is adhyay ke liye, kripya jab bhi hum *concurrent* ka upyog karein to maanasik roop se ise *concurrent and/or parallel* se badal lein.
+
+---
+
+Kai bhashayein concurrent samasyaon se nipatne ke liye apne dwara prastut samadhanon ke baare mein kattar (dogmatic) hain. Udaharan ke liye, Erlang mein message-passing concurrency ke liye shandar karyakshamata hai lekin threads ke beech state share karne ke keval aspष्ट tarike hain. Sambhavit samadhanon ke keval ek up-samucchay ka samarthan karna uchch-stareeya bhashaon ke liye ek uchit rananiti hai, kyonki ek uchch-stareeya bhasha abstractions prapt karne ke liye kuch niyantran chhodne se laabh ka vaada karti hai. Halaanki, nimn-stareeya bhashaon se yah apeksha ki jaati hai ki ve kisi bhi sthiti mein sarvottam pradarshan ke saath samadhan pradan karein aur hardware par kam abstractions rakhein. Isliye, Rust aapki sthiti aur avashyaktaon ke liye jo bhi tarika uchit ho, usmein samasyaon ko model karne ke liye vibhinn prakar ke upkaran prastut karta hai.
+
+Yahan ve vishay hain jin par hum is adhyay mein charcha karenge:
+
+* Ek hi samay par code ke kai tukdon ko chalaane ke liye **threads kaise banayein**.
+* ***Message-passing* concurrency**, jahan channels threads ke beech sandesh bhejte hain.
+* ***Shared-state* concurrency**, jahan kai threads ke paas data ke kisi tukde tak pahunch hoti hai.
+* **`Sync` aur `Send` traits**, jo Rust ki concurrency guarantees ko upyogakarta-dwara-paribhashit types ke saath-saath standard library dwara pradan kiye gaye types tak bhi vistarit karte hain.
