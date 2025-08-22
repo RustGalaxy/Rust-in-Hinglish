@@ -1,0 +1,5 @@
+## Object-Oriented Programming Features
+
+**Object-Oriented Programming (OOP)** programs ko model karne ka ek tareeka hai. 👨‍💻 Programmatic concept ke roop mein Objects ko 1960s mein Simula programming language mein pesh kiya gaya tha. Un objects ne Alan Kay ke programming architecture ko prabhavit kiya, jismein objects ek doosre ko messages pass karte hain. Is architecture ko describe karne ke liye, unhone 1967 mein *object-oriented programming* shabd gadha (coined).
+
+OOP kya hai, iski kai alag-alag paribhashayein hain. Kuch paribhashaon ke anusaar Rust object-oriented hai, jabki doosron ke anusaar nahi. Is chapter mein, hum un visheshtaon (characteristics) ko explore karenge jinhe aam taur par object-oriented maana jaata hai aur dekhenge ki ve visheshtayein idiomatic Rust mein kaise anuvaad (translate) hoti hain. Uske baad, hum aapko Rust mein ek object-oriented design pattern implement karna dikhayenge aur iske fayde-nuksan (trade-offs) par charcha karenge, iski tulna ek aise solution se karenge jo Rust ki apni taakaton (strengths) ka istemal karke banaya gaya ho.
