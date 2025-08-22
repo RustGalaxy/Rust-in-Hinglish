@@ -65,7 +65,7 @@ Your contributions are incredibly valuable and welcome! We encourage you to help
 1.  **Fork** this repository (click the 'Fork' button in the top right corner).
 2.  **Clone** your forked repository to your local machine.
     ```bash
-    git clone https://github.com/YOUR_USERNAME/Rust-in-Hinglish.git
+    git clone https://github.com/RustGalaxy/Rust-in-Hinglish.git
     ```
 3.  Create a new **branch** for your changes.
     ```bash
